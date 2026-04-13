@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_mint"
+    tools:context=".ChatActivity">
+
+    <!-- Chat messages list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_chat_messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="240dp"
+        android:clipToPadding="false"
+        android:contentDescription="Chat messages"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <!-- Bottom panel: quick replies + FAQ + input -->
+    <LinearLayout
+        android:id="@+id/ll_bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:paddingBottom="12dp">
+
+        <!-- Quick Reply Chips -->
+        <HorizontalScrollView
+            android:id="@+id/hsv_quick_replies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="4dp"
+            android:scrollbars="none"
+            android:contentDescription="Quick reply suggestions">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_quick_reply_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="How does NutriSense AI work?"
+                    android:textSize="12sp"
+                    android:contentDescription="Quick reply: How does NutriSense AI work?"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    app:chipBackgroundColor="@color/nutrisense_pill_green_bg"
+                    app:chipStrokeColor="@color/nutrisense_green"
+                    app:chipStrokeWidth="1dp"
+                    app:chipCornerRadius="20dp"
+                    app:textColor="@color/nutrisense_dark_text" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_quick_reply_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="What nutrients are tracked?"
+                    android:textSize="12sp"
+                    android:contentDescription="Quick reply: What nutrients are tracked?"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    app:chipBackgroundColor="@color/nutrisense_pill_green_bg"
+                    app:chipStrokeColor="@color/nutrisense_green"
+                    app:chipStrokeWidth="1dp"
+                    app:chipCornerRadius="20dp"
+                    app:textColor="@color/nutrisense_dark_text" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_quick_reply_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="How accurate are AI recommendations?"
+                    android:textSize="12sp"
+                    android:contentDescription="Quick reply: How accurate are AI recommendations?"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    app:chipBackgroundColor="@color/nutrisense_pill_green_bg"
+                    app:chipStrokeColor="@color/nutrisense_green"
+                    app:chipStrokeWidth="1dp"
+                    app:chipCornerRadius="20dp"
+                    app:textColor="@color/nutrisense_dark_text" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_quick_reply_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Can I track keto or vegan diets?"
+                    android:textSize="12sp"
+                    android:contentDescription="Quick reply: Can I track keto or vegan diets?"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    app:chipBackgroundColor="@color/nutrisense_pill_green_bg"
+                    app:chipStrokeColor="@color/nutrisense_green"
+                    app:chipStrokeWidth="1dp"
+                    app:chipCornerRadius="20dp"
+                    app:textColor="@color/nutrisense_dark_text" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_quick_reply_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How often should I check nutrient levels?"
+                    android:textSize="12sp"
+                    android:contentDescription="Quick reply: How often should I check nutrient levels?"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    app:chipBackgroundColor="@color/nutrisense_pill_green_bg"
+                    app:chipStrokeColor="@color/nutrisense_green"
+                    app:chipStrokeWidth="1dp"
+                    app:chipCornerRadius="20dp"
+                    app:textColor="@color/nutrisense_dark_text" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- FAQ Section -->
+        <LinearLayout
+            android:id="@+id/ll_faq_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingTop="4dp">
+
+            <!-- FAQ Header Toggle -->
+            <LinearLayout
+                android:id="@+id/ll_faq_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="Toggle FAQ section">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_info_outline"
+                    android:contentDescription="FAQ icon"
+                    app:tint="@color/nutrisense_green" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:text="Frequently Asked Questions"
+                    android:textColor="@color/nutrisense_dark_text"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_faq_expand_arrow"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:rotation="90"
+                    android:contentDescription="Expand FAQ"
+                    app:tint="@color/nutrisense_gray_text" />
+            </LinearLayout>
+
+            <!-- FAQ Items (collapsed by default) -->
+            <LinearLayout
+                android:id="@+id/ll_faq_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- FAQ Item 1 -->
+                <include
+                    android:id="@+id/faq_item_1"
+                    layout="@layout/faq_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp" />
+
+                <!-- FAQ Item 2 -->
+                <include
+                    android:id="@+id/faq_item_2"
+                    layout="@layout/faq_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp" />
+
+                <!-- FAQ Item 3 -->
+                <include
+                    android:id="@+id/faq_item_3"
+                    layout="@layout/faq_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp" />
+
+                <!-- FAQ Item 4 -->
+                <include
+                    android:id="@+id/faq_item_4"
+                    layout="@layout/faq_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp" />
+
+                <!-- FAQ Item 5 -->
+                <include
+                    android:id="@+id/faq_item_5"
+                    layout="@layout/faq_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Input Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingTop="8dp">
+
+            <EditText
+                android:id="@+id/et_chat_input"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded_input"
+                android:hint="Ask NutriSense AI…"
+                android:textColorHint="@color/nutrisense_gray_text"
+                android:textColor="@color/nutrisense_dark_text"
+                android:textSize="14sp"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="0dp"
+                android:maxLines="1"
+                android:inputType="textImeMultiLine"
+                android:imeOptions="actionSend"
+                android:importantForAutofill="no"
+                android:contentDescription="Chat message input field" />
+
+            <ImageView
+                android:id="@+id/iv_chat_send"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/rounded_button_bg"
+                android:padding="12dp"
+                android:src="@drawable/ic_arrow_forward"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Send message"
+                app:tint="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

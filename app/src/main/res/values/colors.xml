@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="logo_green_solid">#388E3C</color>
+    <color name="bg_mint">#F4FAF6</color>
+    <color name="bg_white">#FFFFFF</color>
+    <color name="text_dark_green">#1B5E20</color>
+    <color name="text_black">#000000</color>
+    <color name="text_gray">#757575</color>
+    <color name="btn_green">#388E3C</color>
+    <color name="green_primary">#4CAF50</color>
+    <color name="gray_text">#757575</color>
+
+    <color name="nutrisense_green">#34A853</color>
+    <color name="nutrisense_dark_text">#1F2937</color>
+    <color name="nutrisense_gray_text">#6B7280</color>
+    <color name="nutrisense_input_bg">#F3F4F6</color>
+    <color name="nutrisense_blue_link">#3B82F6</color>
+    <color name="nutrisense_notification_red">#FF4D4D</color>
+    <color name="nutrisense_pill_green_bg">#DEF7EC</color>
+    <color name="nutrisense_card_white">#FFFFFF</color>
+    <color name="nutrisense_card_light_green_bg">#E0F2F1</color>
+    <color name="nutrisense_card_light_yellow_bg">#FEFBE8</color>
+    <color name="nutrisense_sensor_potassium_bg">#FFFFFF</color>
+    <color name="nutrisense_sensor_moisture_bg">#FFFFFF</color>
+    <color name="nutrisense_crop_card_normal">#FFFFFF</color>
+    <color name="nutrisense_crop_card_selected">#DEF7EC</color>
+    <color name="nutrisense_green_dark">#2E7D32</color>
+    <color name="nutrisense_green_light">#4CAF50</color>
+</resources>
