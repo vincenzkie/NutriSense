@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Nutrisense</string>
+    <string name="welcome_to">Nutrisense</string>
+    <string name="welcome_message">welcome to nutrisense</string>
+
+    <!-- Chat activity -->
+    <string name="chat_input_hint">Ask NutriSense AI…</string>
+    <string name="chat_send_cd">Send message</string>
+
+    <!-- Quick reply chips -->
+    <string name="quick_reply_1">How does NutriSense AI work?</string>
+    <string name="quick_reply_2">What nutrients are tracked?</string>
+    <string name="quick_reply_3">How accurate are AI recommendations?</string>
+    <string name="quick_reply_4">Can I track keto or vegan diets?</string>
+    <string name="quick_reply_5">How often should I check nutrient levels?</string>
+
+    <!-- FAQ questions -->
+    <string name="faq_q1">How does NutriSense AI analyze my nutrition?</string>
+    <string name="faq_q2">What nutrients does NutriSense track?</string>
+    <string name="faq_q3">How accurate are the AI recommendations?</string>
+    <string name="faq_q4">Can I track specific diet types (keto, vegan, etc.)?</string>
+    <string name="faq_q5">How often should I check my nutrient levels?</string>
+
+    <!-- FAQ answers -->
+    <string name="faq_a1">NutriSense AI uses advanced machine learning to analyze your dietary intake by examining the nutrients in the foods you log. It cross-references your data against recommended daily values, identifies nutritional gaps, and provides personalized insights based on your health profile and goals.</string>
+    <string name="faq_a2">NutriSense tracks macronutrients (carbohydrates, proteins, fats), vitamins (A, B1–B12, C, D, E, K), essential minerals (calcium, iron, magnesium, potassium, zinc, sodium), and key micronutrients such as fiber, omega-3 fatty acids, and antioxidants.</string>
+    <string name="faq_a3">Our AI recommendations are based on peer-reviewed nutritional research and established dietary guidelines (WHO, USDA). The system continuously learns from your feedback and logged data to refine suggestions. Accuracy improves over time as the AI builds a more complete picture of your nutritional needs.</string>
+    <string name="faq_a4">Yes! NutriSense supports ketogenic, vegan, vegetarian, paleo, Mediterranean, gluten-free, and many more dietary preferences. Set your diet type in your profile and the AI will tailor all recommendations, macro targets, and food suggestions accordingly.</string>
+    <string name="faq_a5">Log your meals daily so NutriSense can provide real-time nutrient tracking. Weekly reviews of your nutrient summaries help identify patterns and deficiencies. For users with specific health conditions, more frequent monitoring may be advised by a healthcare provider.</string>
+</resources>
